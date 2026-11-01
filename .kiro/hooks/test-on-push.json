@@ -1,1 +1,15 @@
-
+{
+  "name": "test-on-push",
+  "description": "Run pytest before every commit so broken code never reaches GitHub.",
+  "enabled": true,
+  "trigger": {
+    "event": "pre_commit",
+    "glob": "**/*.py"
+  },
+  "action": {
+    "type": "shell",
+    "command": "pytest -q",
+    "working_directory": "${workspaceFolder}",
+    "timeout_seconds": 120
+  }
+}
