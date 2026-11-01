@@ -1,1 +1,21 @@
-
+services:
+  kiro-sentry:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: kiro-sentry:1.0.0
+    container_name: kiro-sentry
+    ports:
+      - "8000:8000"
+    environment:
+      APP_ENV: production
+      LOG_LEVEL: info
+    restart: unless-stopped
+    init: true
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+    stop_grace_period: 10s
