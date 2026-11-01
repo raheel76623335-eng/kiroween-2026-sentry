@@ -1,1 +1,32 @@
+# --- Python --------------------------------------------------------------
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+dist/
+build/
 
+# --- Secrets / local env -------------------------------------------------
+.env
+.env.*
+!.env.example
+
+# --- OS / editor ---------------------------------------------------------
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.swp
+*.log
+
+# --- Docker --------------------------------------------------------------
+*.tar
+
+# --- Kiro -----------------------------------------------------------------
+# IMPORTANT: .kiro/ is REQUIRED by the Kiroween 2026 rules.
+# Do NOT add ".kiro/" below. It must remain version-controlled.
