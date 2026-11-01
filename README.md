@@ -1,2 +1,8 @@
-# kiroween-2026-sentry
-Autonomous system log monitoring &amp; AI remediation agent built for Kiroween 2026
+# Kiro-Sentry — Autonomous Cloud & Log Sentinel
+
+Real-time telemetry ingestion + autonomous AI remediation powered by **Kiro**.
+
+## Run
+
+```bash
+docker compose up --build
