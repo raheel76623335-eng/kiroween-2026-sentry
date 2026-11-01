@@ -1,1 +1,5 @@
-
+make build   # build image
+make up      # start stack
+make test    # pytest
+make lint    # flake8
+make down    # stop
